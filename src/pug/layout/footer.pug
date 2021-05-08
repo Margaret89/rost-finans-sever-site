@@ -1,0 +1,64 @@
+footer.footer
+	.container
+		.row
+			.col-md-8.col-lg-4
+				.footer__logo
+					a(href="/")
+						img(src="assets/img/logo.jpg", alt="")
+
+				.footer-contact-wrap
+					.footer-contact
+						.footer-contact__icon
+							+svg('ic-call','ic-call', '20', '20')
+						.footer-contact__content
+							a.footer-contact__phone(href="tel:+79115012741") +7 911-501-27-41
+
+					.footer-contact
+						.footer-contact__icon
+							+svg('ic-address','ic-address', '19', '23')
+						.footer-contact__content 164522, Архангельская область, г. Северодвинск, ул. Трухинова, д. 6А, пом. 3-Н
+
+					.footer-contact
+						.footer-contact__icon
+							+svg('ic-mail','ic-mail', '20', '15')
+						.footer-contact__content E-mail: 
+							a(href="mailto:rostfinance@mail.ru") rostfinance@mail.ru
+
+			.col-md-4.col-lg-2
+				ul.footer-menu
+					-
+						var list=[
+							{text:'Акции'},
+							{text:'Продукты'},
+							{text:'FAQ'},
+							{text:'Отделения'},
+							{text:'Документы'},
+							{text:'Реквизиты'},
+							{text:'О компании'},
+							{text:'Контакты'},
+						]
+
+					each item in list
+						li.footer-menu__item
+							a(href="#")= item.text
+
+			.col-lg-6
+				.footer__info
+					.footer-more.js-footer-more
+						.footer-more__action
+							.footer-more__label Подробнее
+							.footer-more__btn.js-footer-more-btn
+								+svg('ic-plus','ic-plus', '12', '12')
+								+svg('ic-minus','ic-minus', '18', '2')
+
+						.footer-more__content.js-footer-more-content © 2001-2021. АО «Альфа-Банк», официальный сайт. Генеральная лицензия Банка России № 1326 от 16 января 2015 г. АО АЛЬФА-БАНК является участником системы обязательного страхования вкладов. Информация о максимальных процентных ставках по вкладам физических лиц. Центр раскрытия корпоративной информации. Информация профессионального участника рынка ценных бумаг. Информация о лицах, под контролем либо значительным влиянием которых находится Банк. Ул. Каланчевская, 27, Москва, 107078. АО «Альфа-Банк» использует файлы «cookie» с целью персонализации сервисов и повышения удобства пользования веб-сайтом.
+
+					.footer__polit 
+						span.d-none.d-md-inline Настоящим я, свободно, своей волей и в своем интересе в соответствии с положениями Федерального закона от 27.07.2006 г. № 152-ФЗ «О персональных данных» (с изменениями и дополнениями) даю свое согласие:
+						br
+						a(href="#") Подробнее о политике конфиденциальности
+
+
+.move-up.js-move-up
+	+svg('ic-arrow-up','ic-arrow-up', '14', '8')
+	.move-up__text Наверх

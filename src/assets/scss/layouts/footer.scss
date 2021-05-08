@@ -1,0 +1,174 @@
+.footer{
+	background: $color-blue;
+	color: $color-grey;
+	padding: 84px 0;
+	@include font(normal, normal, 1.4rem, 1.7, $color-grey);
+
+	.icon{fill: rgba(255, 255, 255, 0.6);}
+	a{color: $color-grey;}
+
+	&__logo{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 17px 29px;
+		border-radius: 3px;
+		background: #fff;
+		margin-bottom: 45px;
+	}
+
+	&__polit{margin-top: 30px;}
+
+	&__info{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
+}
+
+.footer-contact{
+	display: flex;
+
+	&:not(:last-child){margin-bottom: 37px;}
+
+	&__icon{
+		flex: 0 0 20px;
+		text-align: center;
+		margin-right: 20px;
+		padding-top: 2px;
+
+		.icon{fill: rgba(255, 255, 255, 0.6);}
+		.ic-mail{margin-top: -3px;}
+	}
+
+	&__content{
+		max-width: 260px;
+		@include font(normal, normal, 1.6rem, 1.5, $color-grey);
+	}
+
+	&__phone{
+		font-size: 2rem;
+		font-weight: bold;
+		color: #fff;
+		text-decoration: none;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__phone:hover{color: $color-grey;}
+}
+
+.footer-more{
+	&__action{
+		display: none;
+		padding: 20px 0;
+		border-top: 1px solid rgba(255,255,255,0.2);
+		border-bottom: 1px solid rgba(255,255,255,0.2);
+	}
+
+	&__content{
+		@include font(normal, normal, 1.4rem, 1.86, $color-grey);
+	}
+
+	&__title{
+		@include font(normal, normal, 1.4rem, 1.86, $color-grey);
+		margin-right: 15px;
+	}
+
+	&__btn{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		cursor: pointer;
+
+		.icon{fill: #fff;}
+	}
+
+	.ic-minus{display: none;}
+
+	&__btn.active .ic-plus{display: none;}
+	&__btn.active .ic-minus{display: inline-block;}
+}
+
+.footer-menu{
+	&,
+	&__item{
+		@include reset-list;
+	}
+
+	&__item::before{display: none;}
+
+	&__item{
+		@include font(normal, normal, 1.6rem, 1.2, #fff);
+
+		a{
+			color: #fff;
+			text-decoration: none;
+		}
+
+		a:hover{text-decoration: underline;}
+	}
+
+	&__item:not(:last-child){margin-bottom: 25px;}
+}
+
+@media (max-width: 991px) {
+	.footer{
+		&__info{
+			height: auto;
+			margin-top: 50px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.footer-more{
+		&__content{display: block!important;}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer{
+		padding: 30px 0;
+
+		&__logo{
+			max-width: 250px;
+			margin-bottom: 22px;
+		}
+	}
+
+	.footer-contact-wrap{margin-bottom: 40px;}
+
+	.footer-contact{
+		&__content{
+			max-width: none;
+			font-size: 1.4rem;
+		}
+
+		&__phone{font-size: 1.6rem;}
+		&__icon{padding-top: 0;}
+		&:not(:last-child){margin-bottom: 20px;}
+	}
+
+	.footer-menu{
+		column-count: 2;
+		column-gap: 30px;
+	}
+
+	.footer-more{
+		&__action{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__content{
+			display: none;
+			padding-top: 20px;
+		}
+	}
+}
