@@ -91,48 +91,150 @@ block content
 						.top-block__info.d-md-none
 							.top-block__title Займы в&nbsp;Северодвинске
 							
-	//- section.branches-wrap
-	//- 	.container
-	//- 		.row
-	//- 			.col-12
-	//- 				.branches-wrap__content
-	//- 					.h1 Отделение в регионе
+	section.branches-wrap
+		.container
+			.row
+				.col-12
+					.branches-wrap__content
+						.branches-wrap__head
+							.h1 Отделения в регионе
 
-	//- 					.branches
-	//- 						a(href="#").branches__item
-	//- 							.branches__img(style="background-image: url(assets/img/branch2.jpg)")
+							.btn-arr-wrap.js-branches-slider-arr.d-none.d-md-inline-flex
 
-	//- 						a(href="#").branches__item
-	//- 							.branches__img(style="background-image: url(assets/img/branch1.jpg)")
+						.branches-slider.js-branches-slider
+							-
+								var list=[
+									{img:'branch2.jpg', title:'г.Северодвинск', index:'164522', address:'Архангельская область, улица Трухинова, дом 6а, пом. 3Н'},
+									{img:'branch1.jpg', title:'г. Лиски', index:'397901', address:'Воронежская область, Коммунистическая ул., 5'},
+									{img:'branch2.jpg', title:'г. Архангельск', index:'397901', address:'Архангельская область, Советская улица, 44'},
+									{img:'branch1.jpg', title:'г. Лиски', index:'397901', address:'Воронежская область, Коммунистическая ул., 5'},
+									{img:'branch1.jpg', title:'г. Лиски', index:'397901', address:'Воронежская область, Коммунистическая ул., 5'},
+									{img:'branch2.jpg', title:'г. Архангельск', index:'397901', address:'Архангельская область, Советская улица, 44'},
+								]
 
+							each item in list
+								.branches-slider__item
+									.branches-slider__img(style="background-image: url(assets/img/"+item.img+")")
+									
+									.branches-slider__content
+										.branches-slider__city= item.title
+										.branches-slider__index= item.index
+										.branches-slider__address= item.address
 
-	//- section.mark-wrap
-	//- 	.container.container_indent
-	//- 		.row
-	//- 			.col-12
-	//- 				.h1 Рейтинг компании
+	section.mark-wrap
+		.container.container_indent
+			.row
+				.col-12
+					.h1 Рейтинг компании
 
-	//- 		.row
-	//- 			-
-	//- 				var list=[
-	//- 					{logo:'ya.jpg', num:'4.7', text:'Оценок : 10'},
-	//- 					{logo:'zoon.jpg', num:'4.7', text:'Оценок : 10'},
-	//- 					{logo:'yahoo.jpg', num:'4.7', text:'Оценок : 10'},
-	//- 				]
+			.row
+				-
+					var list=[
+						{logo:'ya.jpg', num:'4.7', text:'Оценок : 10'},
+						{logo:'zoon.jpg', num:'4.7', text:'Оценок : 10'},
+						{logo:'yahoo.jpg', num:'4.7', text:'Оценок : 10'},
+					]
 
-	//- 			each item in list
-	//- 				.col-md-6.col-lg-4
-	//- 					.mark
-	//- 						.mark__icon
-	//- 							img(src="assets/img/"+item.logo, alt="")
-	//- 						.mark__content
-	//- 							.mark__rating
-	//- 								.mark__num= item.num 
+				each item in list
+					.col-md-6.col-lg-4
+						.mark
+							.mark__icon
+								img(src="assets/img/"+item.logo, alt="")
+							.mark__content
+								.mark__rating
+									.mark__num= item.num 
 
-	//- 								.rating
-	//- 									.rating__content(style="width:76%")
+									.rating
+										.rating__content(style="width:76%")
 
-	//- 							.mark__text= item.text
+								.mark__text= item.text
+
+	section.product-wrap
+		.container
+			.row
+				.col-12
+					.product-wrap__content
+						.product-wrap__head
+							.h1 Продукты
+
+							.btn-arr-wrap.js-product-slider-arr.d-none.d-md-inline-flex
+
+						.product-slider.js-product-slider
+							-
+								var list=[
+									{img:'product1.jpg', title:'Для новых клиентов', text:'Берите небольшую сумму на короткий срок'},
+									{img:'product2.jpg', title:'Для действующих', text:'Берите займы постоянно и получайте лучшие условия'},
+									{img:'product3.jpg', title:'Заём под ПТС', text:'Берите до 500 000 рублей под залог авто: ПТС и машина остаются у вас'},
+									{img:'product2.jpg', title:'Для действующих', text:'Берите займы постоянно и получайте лучшие условия'},
+									{img:'product1.jpg', title:'Для новых клиентов', text:'Берите небольшую сумму на короткий срок'},
+									{img:'product3.jpg', title:'Заём под ПТС', text:'Берите до 500 000 рублей под залог авто: ПТС и машина остаются у вас'},
+								]
+
+							each item in list
+								.product-item
+									a(href="#").product-item__img-wrap
+										.product-item__img(style="background-image: url(assets/img/"+item.img+")")
+									
+									.product-item__content
+										.product-item__main
+											.product-item__title= item.title
+											.product-item__text= item.text
+
+										.product-item__more
+											a(href="#").product-item__more-link Подробнее
+
+			.row
+				.col-12
+					.product-more
+						a.btn.btn_border(href='#')
+							span Все продукты
+							+svg('ic-arrow-right','ic-arrow-right', '8', '14')
+
+	section.article-wrap
+		.container
+			.row
+				.col-12
+					.article-wrap__content
+						.article-wrap__head
+							.h1 Новости и акции
+
+							.btn-arr-wrap.js-article-slider-arr.d-none.d-md-inline-flex
+
+						.article-slider.js-article-slider
+							-
+								var list=[
+									{img:'article1.jpg', date:'10.04.2021', tag:'Акция', title:'Приходи с договором конкурента — сделаем скидку!  овых клиентов', text:'Берите небольшую сумму на короткий срок'},
+									{img:'article1.jpg', date:'10.04.2021', tag:'Акция', title:'Уникальная ставка от 9,2% годовых', text:'Берите небольшую сумму на короткий срок'},
+									{img:'article1.jpg', date:'10.04.2021', tag:'Акция', title:'Предварительное решение по 2 документам ', text:'Берите небольшую сумму на короткий срок'},
+									{img:'article1.jpg', date:'10.04.2021', tag:'Акция', title:'Уникальная ставка от 9,2% годовых', text:'Берите небольшую сумму на короткий срок'},
+									{img:'article1.jpg', date:'10.04.2021', tag:'Акция', title:'Приходи с договором конкурента — сделаем скидку!  овых клиентов', text:'Берите небольшую сумму на короткий срок'},
+									{img:'article1.jpg', date:'10.04.2021', tag:'Акция', title:'Уникальная ставка от 9,2% годовых', text:'Берите небольшую сумму на короткий срок'},
+								]
+
+							each item in list
+								.article-item
+									a(href="#").article-item__img-wrap
+										.article-item__img(style="background-image: url(assets/img/"+item.img+")")
+									
+									.article-item__content
+										.article-item__main
+											.article-item__info
+												span.article-item__date= item.date
+												span.article-item__tag= item.tag
+
+											.article-item__title= item.title
+											.article-item__text= item.text
+
+										.article-item__more
+											a(href="#").article-item__more-link Подробнее
+
+			.row
+				.col-12
+					.article-more
+						a.btn.btn_border(href='#')
+							span Все новости и акции
+							+svg('ic-arrow-right','ic-arrow-right', '8', '14')
+
 
 	//- section.text-block-wrap
 	//- 	.container.container_indent

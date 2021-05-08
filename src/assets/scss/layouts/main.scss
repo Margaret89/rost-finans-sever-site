@@ -122,12 +122,11 @@ input[type="submit"].btn,
 button.btn{
 	display: inline-block;
 	height: 4.6rem;
-	background: $color-red;
+	background: $color-blue;
 	border: 0;
 	outline: 0;
 	border-radius: 2.3rem;
-	@include font(normal, 500, 1.4rem, 4.4rem, #fff);
-	text-transform: uppercase;
+	@include font(normal, 500, 1.6rem, 4.4rem, #fff);
 	text-decoration: none;
 	text-align: center;
 	padding: 0 32px;
@@ -138,7 +137,30 @@ button.btn{
 .btn:hover,
 input[type="submit"].btn:hover,
 button.btn:hover{
-	background: $color-dark-red;
+	background: $color-dark-blue;
+}
+
+.btn_border,
+input[type="submit"].btn_border,
+button.btn_border{
+	background: transparent;
+	border: 2px solid $color-blue;
+	color: $color-blue;
+}
+
+.btn_border:hover,
+input[type="submit"].btn_border:hover,
+button.btn_border:hover{
+	background: $color-blue;
+	color: #fff;
+}
+
+.btn{
+	.icon{fill: #fff;}
+	.icon:first-child{margin-right: 10px;}
+	.icon:last-child{margin-left: 10px;}
+	&_border .icon{fill: $color-blue;}
+	&_border:hover .icon{fill: #fff;}
 }
 
 .code{

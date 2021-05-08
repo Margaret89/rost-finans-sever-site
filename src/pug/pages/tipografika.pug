@@ -74,6 +74,15 @@ block content
 				br
 				div.h2 Кнопки
 				a.btn(href='#') Кнопка
+				br
+				br
+				a.btn.btn_border(href='#')
+					span Кнопка
+				br
+				br
+				a.btn.btn_border(href='#')
+					span Кнопка
+					+svg('ic-arrow-right','ic-arrow-right', '8', '14')
 
 				br
 				br
@@ -138,15 +147,15 @@ block content
 							+svg('ic-arrow-down','ic-arrow-down', '14', '8')
 						.type-icon__name ic-arrow-down
 
-					//- .type-icon__item
-					//- 	.type-icon__img
-					//- 		+svg('ic-arrow-left','ic-arrow-left', '8', '14')
-					//- 	.type-icon__name ic-arrow-left
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-arrow-left','ic-arrow-left', '8', '14')
+						.type-icon__name ic-arrow-left
 
-					//- .type-icon__item
-					//- 	.type-icon__img
-					//- 		+svg('ic-arrow-right','ic-arrow-right', '8', '14')
-					//- 	.type-icon__name ic-arrow-right
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-arrow-right','ic-arrow-right', '8', '14')
+						.type-icon__name ic-arrow-right
 
 					.type-icon__item
 						.type-icon__img
