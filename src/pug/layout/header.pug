@@ -1,5 +1,5 @@
 header.header
-	.container
+	.container.container_indent
 		.row
 			.col-12
 				.header__content
@@ -7,7 +7,7 @@ header.header
 						a(href="/")
 							img(src="assets/img/logo.jpg", alt="")
 
-					.header-contact.d-none.d-lg-inline-flex
+					.header-contact.d-none.d-md-inline-flex
 						.header-contact__icon
 							+svg('ic-call','ic-call', '20', '20')
 							
@@ -15,14 +15,14 @@ header.header
 							.header-contact__text
 								a.header-contact__phone(href="tel:+79115012741") +7 (911) 501-27-41
 
-					.header-contact.d-none.d-lg-inline-flex
+					.header-contact.d-none.d-md-inline-flex
 						.header-contact__icon
 							+svg('ic-address','ic-address', '19', '23')
 
 						.header-contact__content
 							.header-contact__text 164522, Архангельская область, г.&nbsp;Северодвинск, ул.&nbsp;Трухинова, д.&nbsp;6А, пом.&nbsp;3-Н
 
-					.header-mob-contact-wrap.d-lg-none
+					.header-mob-contact-wrap.d-md-none
 						.header-mob-contact.js-header-mob-contact
 							.header-mob-contact__btn.js-header-mob-contact-btn
 								+svg('ic-call','ic-call', '20', '20')
@@ -64,7 +64,7 @@ header.header
 							span
 
 	nav.main-menu-wrap.js-main-menu-wrap
-		.container
+		.container.container_indent
 			.row
 				.col-12
 					ul.main-menu

@@ -5,13 +5,13 @@ block variables
 
 block content
 	section.top-block
-		.container
+		.container.container_indent
 			.row
 				.col-12
 					.top-block__content
 						.top-block__main
 							.top-block__info.d-none.d-md-block
-								.top-block__title Займы в&nbsp;Северодвинске
+								.top-block__title Займы в&nbsp;МФО
 								.top-block__text
 									p Получить деньги без справок и поручителей легко и просто!
 									p Дополнительный текст про отделения банка
@@ -63,15 +63,17 @@ block content
 									#map.map
 								script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
 						
-							.contact-list.d-none.d-md-flex
+							.contact-list.d-none.d-md-block
 								.contact-list__item
 									.contact-list__icon
-										+svg('ic-address','ic-address', '27', '33')
+										+svg('ic-address','ic-address', '30', '37')
 									.contact-list__content
-										.contact-list__label Адрес:
+										.contact-list__label Главный офис:
 										.contact-list__text 164522, Архангельская область, г. Северодвинск, ул. Трухинова, д. 6А, пом. 3-Н
 								
 								.contact-list__item
+									.contact-list__icon
+										+svg('ic-path','ic-path', '38', '33')
 									.contact-list__content
 										.contact-list__label Как добраться:
 										.contact-list__text
@@ -89,129 +91,129 @@ block content
 						.top-block__info.d-md-none
 							.top-block__title Займы в&nbsp;Северодвинске
 							
-	section.branches-wrap
-		.container
-			.row
-				.col-12
-					.branches-wrap__content
-						.h1 Отделение в регионе
+	//- section.branches-wrap
+	//- 	.container
+	//- 		.row
+	//- 			.col-12
+	//- 				.branches-wrap__content
+	//- 					.h1 Отделение в регионе
 
-						.branches
-							a(href="#").branches__item
-								.branches__img(style="background-image: url(assets/img/branch2.jpg)")
+	//- 					.branches
+	//- 						a(href="#").branches__item
+	//- 							.branches__img(style="background-image: url(assets/img/branch2.jpg)")
 
-							a(href="#").branches__item
-								.branches__img(style="background-image: url(assets/img/branch1.jpg)")
+	//- 						a(href="#").branches__item
+	//- 							.branches__img(style="background-image: url(assets/img/branch1.jpg)")
 
 
-	section.mark-wrap
-		.container.container_indent
-			.row
-				.col-12
-					.h1 Рейтинг компании
+	//- section.mark-wrap
+	//- 	.container.container_indent
+	//- 		.row
+	//- 			.col-12
+	//- 				.h1 Рейтинг компании
 
-			.row
-				-
-					var list=[
-						{logo:'ya.jpg', num:'4.7', text:'Оценок : 10'},
-						{logo:'zoon.jpg', num:'4.7', text:'Оценок : 10'},
-						{logo:'yahoo.jpg', num:'4.7', text:'Оценок : 10'},
-					]
+	//- 		.row
+	//- 			-
+	//- 				var list=[
+	//- 					{logo:'ya.jpg', num:'4.7', text:'Оценок : 10'},
+	//- 					{logo:'zoon.jpg', num:'4.7', text:'Оценок : 10'},
+	//- 					{logo:'yahoo.jpg', num:'4.7', text:'Оценок : 10'},
+	//- 				]
 
-				each item in list
-					.col-md-6.col-lg-4
-						.mark
-							.mark__icon
-								img(src="assets/img/"+item.logo, alt="")
-							.mark__content
-								.mark__rating
-									.mark__num= item.num 
+	//- 			each item in list
+	//- 				.col-md-6.col-lg-4
+	//- 					.mark
+	//- 						.mark__icon
+	//- 							img(src="assets/img/"+item.logo, alt="")
+	//- 						.mark__content
+	//- 							.mark__rating
+	//- 								.mark__num= item.num 
 
-									.rating
-										.rating__content(style="width:76%")
+	//- 								.rating
+	//- 									.rating__content(style="width:76%")
 
-								.mark__text= item.text
+	//- 							.mark__text= item.text
 
-	section.text-block-wrap
-		.container.container_indent
-			.row
-				.col-12
-					.bg-light-blue-left
-						.bg-content
-							.h1 Где взять деньги в долг? н1
+	//- section.text-block-wrap
+	//- 	.container.container_indent
+	//- 		.row
+	//- 			.col-12
+	//- 				.bg-light-blue-left
+	//- 					.bg-content
+	//- 						.h1 Где взять деньги в долг? н1
 
-							.text-block
-								p Микрозаём — это небольшой кредит наличными, выдаваемый микрокредитными организациями. Больше всего такой вид займа подходит для потребительских нужд, когда деньги требуются срочно и нет возможности у кого-либо взять в долг до зарплаты. Микрозаймы выдаются на непродолжительные сроки и на максимально упрощенных условиях.
+	//- 						.text-block
+	//- 							p Микрозаём — это небольшой кредит наличными, выдаваемый микрокредитными организациями. Больше всего такой вид займа подходит для потребительских нужд, когда деньги требуются срочно и нет возможности у кого-либо взять в долг до зарплаты. Микрозаймы выдаются на непродолжительные сроки и на максимально упрощенных условиях.
 
-								h2 выдача денег в долг до зарплаты Н2
-								p Микрозаём — это небольшой кредит наличными, выдаваемый микрокредитными организациями. Больше всего такой вид займа подходит для потребительских нужд, когда деньги требуются срочно и нет возможности у кого-либо взять в долг до зарплаты. Микрозаймы выдаются на непродолжительные сроки и на максимально упрощенных условиях.
+	//- 							h2 выдача денег в долг до зарплаты Н2
+	//- 							p Микрозаём — это небольшой кредит наличными, выдаваемый микрокредитными организациями. Больше всего такой вид займа подходит для потребительских нужд, когда деньги требуются срочно и нет возможности у кого-либо взять в долг до зарплаты. Микрозаймы выдаются на непродолжительные сроки и на максимально упрощенных условиях.
 
-								h3 Лояльные требования Н3
-								p Микрозаём — это небольшой кредит наличными, выдаваемый микрокредитными организациями. Больше всего такой вид займа подходит для потребительских нужд, когда деньги требуются срочно и нет возможности у кого-либо взять в долг до зарплаты. Микрозаймы выдаются на непродолжительные сроки и на максимально упрощенных условиях.
+	//- 							h3 Лояльные требования Н3
+	//- 							p Микрозаём — это небольшой кредит наличными, выдаваемый микрокредитными организациями. Больше всего такой вид займа подходит для потребительских нужд, когда деньги требуются срочно и нет возможности у кого-либо взять в долг до зарплаты. Микрозаймы выдаются на непродолжительные сроки и на максимально упрощенных условиях.
 
-								h3 Выгодный займ – лучшее решение всех финансовых вопросов  Н3
-								p Главная цель обращения клиента в компанию – быстро получить необходимую сумму под низкий процент. Предпосылки возникновения потребности в деньгах различны:
+	//- 							h3 Выгодный займ – лучшее решение всех финансовых вопросов  Н3
+	//- 							p Главная цель обращения клиента в компанию – быстро получить необходимую сумму под низкий процент. Предпосылки возникновения потребности в деньгах различны:
 
-								ul
-									li поехать в путешествие заграницу;
-									li пройти курс лечения в санатории;
-									li поехать в путешествие заграницу;
-									li открыть небольшой бизнес;
-									li сделать ремонт.
+	//- 							ul
+	//- 								li поехать в путешествие заграницу;
+	//- 								li пройти курс лечения в санатории;
+	//- 								li поехать в путешествие заграницу;
+	//- 								li открыть небольшой бизнес;
+	//- 								li сделать ремонт.
 
-	section.review-wrap
-		.container.container_indent
-			.row
-				.col-12
-					.review-wrap__top
-						.h1 Отзывы
+	//- section.review-wrap
+	//- 	.container.container_indent
+	//- 		.row
+	//- 			.col-12
+	//- 				.review-wrap__top
+	//- 					.h1 Отзывы
 
-						.review-slider-arr.js-review-slider-arr.d-none.d-md-inline-flex
+	//- 					.review-slider-arr.js-review-slider-arr.d-none.d-md-inline-flex
 
-		.review-slider.js-review-slider
-			-
-				var list=[
-					{img:'author1.jpg', name:'Антонина Васильевна Ильина', text:'Есть просьба. Для постоянных клиентов предлагать более низкие проценты.Я занимаю каждый месяц, однако проценты такие же.Есть просьба. Для постоянных клиентов предлагать более низкие проценты.'},
-					{img:'author2.jpg', name:'Иван Андреевич Иванов', text:'Срочно понадобились деньги. Оформили и одобрили очень быстро без лишних проблем и заморочек. Качественное обслуживание.'},
-					{img:'author3.jpg', name:'Александра Ильинишна Немоляева', text:'Есть просьба. Для постоянных клиентов предлагать более низкие проценты.'},
-					{img:'author2.jpg', name:'Иван Андреевич Иванов', text:'Срочно понадобились деньги. Оформили и одобрили очень быстро без лишних проблем и заморочек. Качественное обслуживание.'},
-					{img:'author3.jpg', name:'Александра Ильинишна Немоляева', text:'Беру деньги не первый раз. Нахожусь в декрете и кредиты не дают. Но срочно понадобилось деньги, одобрили. Вернула в срок и пользовалась ещё несколько раз. '},
-					{img:'author4.jpg', name:'Антонина Васильевна Ильина', text:'Выручили во время неотложной ситуации. Быстрое рассмотрение, моментальный перевод.'},
-					{img:'author2.jpg', name:'Иван Андреевич Иванов', text:'Есть просьба. Для постоянных клиентов предлагать более низкие проценты.'},
-				]
+	//- 	.review-slider.js-review-slider
+	//- 		-
+	//- 			var list=[
+	//- 				{img:'author1.jpg', name:'Антонина Васильевна Ильина', text:'Есть просьба. Для постоянных клиентов предлагать более низкие проценты.Я занимаю каждый месяц, однако проценты такие же.Есть просьба. Для постоянных клиентов предлагать более низкие проценты.'},
+	//- 				{img:'author2.jpg', name:'Иван Андреевич Иванов', text:'Срочно понадобились деньги. Оформили и одобрили очень быстро без лишних проблем и заморочек. Качественное обслуживание.'},
+	//- 				{img:'author3.jpg', name:'Александра Ильинишна Немоляева', text:'Есть просьба. Для постоянных клиентов предлагать более низкие проценты.'},
+	//- 				{img:'author2.jpg', name:'Иван Андреевич Иванов', text:'Срочно понадобились деньги. Оформили и одобрили очень быстро без лишних проблем и заморочек. Качественное обслуживание.'},
+	//- 				{img:'author3.jpg', name:'Александра Ильинишна Немоляева', text:'Беру деньги не первый раз. Нахожусь в декрете и кредиты не дают. Но срочно понадобилось деньги, одобрили. Вернула в срок и пользовалась ещё несколько раз. '},
+	//- 				{img:'author4.jpg', name:'Антонина Васильевна Ильина', text:'Выручили во время неотложной ситуации. Быстрое рассмотрение, моментальный перевод.'},
+	//- 				{img:'author2.jpg', name:'Иван Андреевич Иванов', text:'Есть просьба. Для постоянных клиентов предлагать более низкие проценты.'},
+	//- 			]
 
-			each item in list
-				.review-slider__item.js-review-slider-item
-					.review-slider__top
-						.review-slider__img(style="background-image: url(assets/img/"+item.img+")")
-						.review-slider__name= item.name
+	//- 		each item in list
+	//- 			.review-slider__item.js-review-slider-item
+	//- 				.review-slider__top
+	//- 					.review-slider__img(style="background-image: url(assets/img/"+item.img+")")
+	//- 					.review-slider__name= item.name
 
-					.review-slider__text= item.text
+	//- 				.review-slider__text= item.text
 
-	section.faq-wrap.last-elem
-		.container.container_indent
-			.row
-				.col-12
-					.bg-light-blue-left
-						.bg-content
-							.h1 FAQ
+	//- section.faq-wrap.last-elem
+	//- 	.container.container_indent
+	//- 		.row
+	//- 			.col-12
+	//- 				.bg-light-blue-left
+	//- 					.bg-content
+	//- 						.h1 FAQ
 
-							-
-								var list=[
-									{question:'Вы можете получить кредит, если', answer:'Единственно верное решение материальных проблем – восполнить нехватку денежных средств. Проблемы бывают микро и макро масштаба. Проверенный план действий, разработанный специалистами компании, помогает устранить трудности, превращая их в возможности. «Центрофинанс» предлагает несколько вариантов микрозаймов, применимых для конкретной финансовой задачи'},
-									{question:'Заявки обрабатываются крглосуточно Одобрение 99,9%?', answer:'Текст'},
-									{question:'Заявки обрабатываются крглосуточно Одобрение 99,9%?', answer:'Текст'},
-									{question:'Заявки обрабатываются крглосуточно Одобрение 99,9%?', answer:'Текст'},
-								]
+	//- 						-
+	//- 							var list=[
+	//- 								{question:'Вы можете получить кредит, если', answer:'Единственно верное решение материальных проблем – восполнить нехватку денежных средств. Проблемы бывают микро и макро масштаба. Проверенный план действий, разработанный специалистами компании, помогает устранить трудности, превращая их в возможности. «Центрофинанс» предлагает несколько вариантов микрозаймов, применимых для конкретной финансовой задачи'},
+	//- 								{question:'Заявки обрабатываются крглосуточно Одобрение 99,9%?', answer:'Текст'},
+	//- 								{question:'Заявки обрабатываются крглосуточно Одобрение 99,9%?', answer:'Текст'},
+	//- 								{question:'Заявки обрабатываются крглосуточно Одобрение 99,9%?', answer:'Текст'},
+	//- 							]
 
-							each item in list
-								.unwrap-block.js-unwrap-block
-									.unwrap-block__head.js-unwrap-head
-										.unwrap-block__title= item.question
-										.unwrap-block__btn.js-unwrap-block-btn
-											+svg('ic-plus','ic-plus', '20', '20')
-											+svg('ic-minus','ic-minus', '20', '3')
+	//- 						each item in list
+	//- 							.unwrap-block.js-unwrap-block
+	//- 								.unwrap-block__head.js-unwrap-head
+	//- 									.unwrap-block__title= item.question
+	//- 									.unwrap-block__btn.js-unwrap-block-btn
+	//- 										+svg('ic-plus','ic-plus', '20', '20')
+	//- 										+svg('ic-minus','ic-minus', '20', '3')
 
-									.unwrap-block__content.js-unwrap-content
-										.unwrap-block__subtitle Ответ:
-										p= item.answer
+	//- 								.unwrap-block__content.js-unwrap-content
+	//- 									.unwrap-block__subtitle Ответ:
+	//- 									p= item.answer
