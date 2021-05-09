@@ -112,10 +112,10 @@ li{
 
 main{
 	flex: 1 1 auto;
-	padding-bottom: 80px;
+	padding-bottom: 130px;
 }
 
-.last-elem{margin-bottom: -80px;}
+.last-elem{margin-bottom: -130px;}
 
 .btn,
 input[type="submit"].btn,
@@ -239,6 +239,8 @@ button.btn_border:hover{
 	h4, .h4{font-size: 1.8rem;}
 	h5, .h5{font-size: 1.6rem;}
 	.bg-content{padding: 60px 0 55px;}
+	main{padding-bottom: 80px;}
+	.last-elem{margin-bottom: -80px;}
 }
 
 @media (max-width: 767px) {
@@ -253,8 +255,8 @@ button.btn_border:hover{
 		padding-right: 20px;
 	}
 
-	main{padding-bottom: 30px;}
-	.last-elem{margin-bottom: -30px;}
+	main{padding-bottom: 40px;}
+	.last-elem{margin-bottom: -40px;}
 	.bg-content{padding: 55px 0;}
 
 	.btn,

@@ -1,0 +1,19 @@
+/*-------------- faq -----------------*/
+.faq-wrap{
+	margin-top: 90px;
+
+	.h1, h1, .h2, h2{margin-bottom: 6rem;}
+}
+
+@media (max-width: 991px) {
+	.faq-wrap{margin-top: 40px;}
+}
+
+@media (max-width: 767px) {
+	.faq-wrap{
+		margin-top: 20px;
+
+		.h1, h1, .h2, h2{margin-bottom: 3rem;}
+		.bg-content{padding: 50px 0 40px;}
+	}
+}

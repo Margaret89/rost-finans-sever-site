@@ -22,7 +22,13 @@
 	}
 
 	&__main{width: 46%;}
-	.contact{width: 54%;}
+
+	.contact{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		width: 54%;
+	}
 
 	&__main{margin-top: -23px;}
 
@@ -51,6 +57,8 @@
 		padding-top: 40px;
 		margin-bottom: 80px;
 
+		.container_indent{padding: 0 15px;}
+
 		&__content{flex-direction: column-reverse;}
 
 		&__main,
@@ -63,7 +71,11 @@
 			margin-bottom: 25px;
 		}
 
-		.form-calc{margin-top: 0;}
+		.form-calc{
+			margin-top: 0;
+			margin-left: 0;
+		}
+
 		.map-wrap{margin-bottom: 40px;}
 	}
 }

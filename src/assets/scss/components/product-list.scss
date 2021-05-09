@@ -15,7 +15,7 @@
 
 	&__content{
 		position: relative;
-		padding: 94px 76px 10px;
+		padding: 94px 76px 0;
 	}
 
 	&__content::before{
@@ -37,6 +37,7 @@
 	height: 100%;
 	background: #fff;
 	border: 1px solid #d5e4f6;
+	border-radius: 5px;
 	overflow: hidden;
 
 	&__img-wrap{
@@ -66,7 +67,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: calc(100% - 246px);
+		height: 100%;
 		padding: 35px 43px 33px;
 	}
 
@@ -100,7 +101,7 @@
 
 .product-more{
 	text-align: center;
-	margin-top: 42px;
+	margin-top: 60px;
 }
 
 .product-slider{
@@ -120,36 +121,67 @@
 	}
 
 	.slick-slide > div{height: 100%;}
+
+	.product-item{display: flex!important;}
 }
 
-// @media (max-width: 991px) {
-// 	.product-wrap{margin: 50px 0 60px;}
-// }
+@media (max-width: 1469px) {
+	.product-slider{
+		.slick-list{
+			margin-left: -15px;
+			margin-right: -15px;
+		}
 
-// @media (max-width: 767px) {
-// 	.product-wrap{
-// 		margin: 45px 0;
+		.slick-slide{margin: 0 15px;}
+	}
+}
 
-// 		.h1, h1{margin-bottom: 3rem;}
-// 	}
+@media (max-width: 1239px) {
+	.product-item{
+		&__content{padding: 21px 17px 25px;}
+	}
+}
 
-// 	.product-item{
-// 		&__img-wrap{height: 140px;}
 
-// 		&__title{
-// 			font-size: 1.6rem;
-// 			margin-bottom: 15px;
-// 		}
+@media (max-width: 991px) {
+	.product-wrap{
+		margin: 80px 0 60px;
+		&__content{padding: 40px 0;}
+		&__content::before{left: -20px;}
+	}
+}
 
-// 		&__text, &__more-link{font-size: 1.4rem;}
-// 		&__more{margin-top: 14px;}
-// 		&__content{padding: 21px 17px 25px;}
-// 	}
+@media (max-width: 767px) {
+	.product-wrap{
+		margin: 50px 0;
+		&__head{margin-bottom: 3rem;}
+		&__content::before{height: 50%;}
+	}
 
-// 	.product-list{
-// 		&__more{
-// 			text-align: left;
-// 			margin-top: 10px;
-// 		}
-// 	}
-// }
+	.product-item{
+		&__title{
+			font-size: 1.6rem;
+			margin-bottom: 15px;
+		}
+
+		&__text, &__more-link{font-size: 1.4rem;}
+		&__more{margin-top: 14px;}
+	}
+
+	.product-slider{
+		margin-left: -20px;
+		margin-right: -20px;
+		
+		.slick-slide[aria-hidden="true"]{opacity: 0.3;}
+
+		.slick-list{
+			padding-right: 100px!important;
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		.slick-slide{margin: 0 10px;}
+	}
+
+	.product-more{margin-top: 10px;}
+}

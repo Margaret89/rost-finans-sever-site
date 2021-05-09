@@ -1,6 +1,6 @@
 /*-------------- article-list -----------------*/
 .article-wrap{
-	margin: 135px 0 90px;
+	margin: 135px 0 130px;
 
 	&__head{
 		display: flex;
@@ -14,7 +14,7 @@
 	}
 
 	&__content{
-		padding: 85px 76px 10px;
+		padding: 85px 76px 0;
 		position: relative;
 	}
 
@@ -38,6 +38,7 @@
 	background: #fff;
 	overflow: hidden;
 	border: 1px solid #d5e4f6;
+	border-radius: 5px;
 
 	&__img-wrap{
 		display: block;
@@ -66,7 +67,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: calc(100% - 246px);
+		height: 100%;
 		padding: 35px 43px 33px;
 	}
 
@@ -111,7 +112,7 @@
 
 .article-more{
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 60px;
 }
 
 .article-slider{
@@ -132,41 +133,79 @@
 	}
 
 	.slick-slide > div{height: 100%;}
+
+	.article-item{display: flex!important;}
 }
 
 // .article-page{margin-bottom: 103px;}
 
-// @media (max-width: 991px) {
-// 	.article-wrap{padding: 60px 0;}
-// }
+@media (max-width: 1469px) {
+	.article-slider{
+		.slick-list{
+			margin-left: -15px;
+			margin-right: -15px;
+		}
 
-// @media (max-width: 767px) {
-// 	.article-wrap{
-// 		padding: 40px 0;
+		.slick-slide{margin: 0 15px;}
+	}
+}
 
-// 		.h1, h1{margin-bottom: 3rem;}
-// 	}
+@media (max-width: 1239px) {
+	.article-item{
+		&__content{padding: 26px 17px 25px;}
+	}
+}
 
-// 	.article-item{
-// 		&__img-wrap{height: 140px;}
 
-// 		&__title{
-// 			font-size: 1.6rem;
-// 			margin-bottom: 15px;
-// 		}
+@media (max-width: 991px) {
+	.article-wrap{
+		margin: 80px 0;
+		&__content{padding-top: 70px;}
+	}
+}
 
-// 		&__text, &__more-link{font-size: 1.4rem;}
-// 		&__more{margin-top: 14px;}
-// 		&__content{padding: 26px 17px 25px;}
+@media (max-width: 767px) {
+	.article-wrap{
+		margin: 50px 0;
+		
+		&__content{padding: 40px 0;}
+		&__head{margin-bottom: 3rem;}
 
-// 		&__date, &__label{font-size: 1.2rem;}
-// 		&__date{margin-bottom: 12px;}
-// 	}
+		&__content::before{
+			height: 50%;
+			right: -20px;
+		}
+	}
 
-// 	.article-list{
-// 		&__more{
-// 			text-align: left;
-// 			margin-top: 10px;
-// 		}
-// 	}
-// }
+	.article-item{
+		&__title{
+			font-size: 1.6rem;
+			margin-bottom: 15px;
+		}
+
+		&__text, &__more-link{font-size: 1.4rem;}
+		&__more{margin-top: 14px;}
+
+		&__info{
+			font-size: 1.2rem;
+			margin-bottom: 12px;
+		}
+	}
+
+	.article-slider{
+		margin-left: -20px;
+		margin-right: -20px;
+		
+		.slick-slide[aria-hidden="true"]{opacity: 0.3;}
+
+		.slick-list{
+			padding-right: 100px!important;
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		.slick-slide{margin: 0 10px;}
+	}
+
+	.article-more{margin-top: 10px;}
+}
