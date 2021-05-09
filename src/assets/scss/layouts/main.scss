@@ -232,6 +232,18 @@ button.btn_border:hover{
 	}
 }
 
+.img-float{
+	max-width: 55%;
+	float: right;
+	margin: 0 0 30px 30px;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 @media (min-width: 1470px) {
 	.row{
 		margin-left: -30px;
@@ -319,4 +331,10 @@ button.btn_border:hover{
 
 	.container_indent .bg-light-blue-left::before{right: -20px;}
 	.container_indent .bg-light-blue-right::before{left: -20px;}
+
+	.img-float{
+		max-width: none;
+		float: none;
+		margin: 0 0 30px 0;
+	}
 }
