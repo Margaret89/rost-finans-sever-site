@@ -1,0 +1,72 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Отделение детальная';
+	- var h1 = 'Отделение в Северодвинске';
+
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Отделения'},
+			{href:'#',name:'Отделение в Северодвинске'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	.page-content
+		.container.container_indent
+			.row
+				.col-12
+					.bg-light-blue-left
+						.page-content__info
+							section.branches-detail
+								.branches-detail__content
+									.contact-list
+										.contact-list__item
+											.contact-list__icon
+												+svg('ic-address','ic-address', '30', '37')
+											.contact-list__content
+												.contact-list__label Адрес:
+												.contact-list__text 164522, Архангельская область, г. Северодвинск, ул. Трухинова, д. 6А, пом. 3-Н
+										
+										.contact-list__item
+											.contact-list__icon
+												+svg('ic-call','ic-call', '25', '25')
+											.contact-list__content
+												.contact-list__label Телефон:
+												.contact-list__text
+													a(href="tel:+74951234567") +7 (495) 123-45-67
+													br
+													a(href="tel:+74951234567") +7 (495) 123-45-67
+										
+										.contact-list__item
+											.contact-list__icon
+												+svg('ic-path','ic-path', '38', '33')
+											.contact-list__content
+												.contact-list__label Как добраться:
+												.contact-list__text
+													.contact-path
+														span.contact-path__icon
+															+svg('ic-bus','ic-bus', '18', '18')
+														span.contact-path__text Бульвар Строителей
+														span.contact-path__distance
+															+svg('ic-person','ic-person', '8', '14')
+															|180 м
+
+														span.contact-path__num 4
+
+									.branches-detail-back
+										a(href="#").branches-detail-back__link
+											+svg('ic-arrow-left','ic-arrow-left', '10', '18')
+											span.branches-detail-back__text Вернуться к списку отделений
+									
+								.branches-detail__map
+									#map.map
+									script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+
+					.branches-detail-clear
+
+	include ../components/mark

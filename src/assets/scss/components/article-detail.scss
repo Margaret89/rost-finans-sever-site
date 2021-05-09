@@ -39,8 +39,8 @@
 	&__item:last-child{margin-left: 15px;}
 
 	&__item:hover{
-		color: $color-dark-blue;
-		.icon{fill: $color-dark-blue;}
+		color: $color-red;
+		.icon{fill: $color-red;}
 	}
 }
 

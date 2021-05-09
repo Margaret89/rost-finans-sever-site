@@ -114,10 +114,12 @@ block content
 
 							each item in list
 								.branches-item
-									.branches-item__img(style="background-image: url(assets/img/"+item.img+")")
+									a(href="#").branches-item__img-wrap
+										.branches-item__img(style="background-image: url(assets/img/"+item.img+")")
 									
 									.branches-item__content
-										.branches-item__city= item.title
+										.branches-item__city
+											a(href="#")= item.title
 										.branches-item__index= item.index
 										.branches-item__address= item.address
 
