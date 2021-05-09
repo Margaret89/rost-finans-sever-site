@@ -1,0 +1,34 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Страница не найдена';
+	- var h1 = 'Страница не найдена';
+
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Страница не найдена'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	.page-content
+		.container.container_indent
+			.row
+				.col-12
+					.bg-light-blue-left
+						.page-content__info
+							.error-page
+								.error-page__content
+									.error-page__title
+										span.error-page__title-bg 404<br>error
+										span.error-page__title-text 404<br>error
+									.error-page__text К сожалению такой страницы не существует
+
+								.error-page__img
+									img(src="assets/img/error-page.png", alt="")
+
+	include ../components/mark

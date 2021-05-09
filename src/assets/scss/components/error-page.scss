@@ -1,0 +1,86 @@
+/*-------------- error-page -----------------*/
+.error-page{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__content{
+		max-width: 425px;
+		padding-right: 30px;
+	}
+
+	&__title{
+		@include font(normal, bold, 10rem, 0.75, #150035);
+		margin-bottom: 3rem;
+		position: relative;
+	}
+
+	&__title-text{position: relative;}
+
+	&__title-bg{
+		color: $color-light-blue;
+		text-shadow: 
+		-0   -1px 0   #39A1FF,
+		 0   -1px 0   #39A1FF,
+		-0    1px 0   #39A1FF,
+		 0    1px 0   #39A1FF,
+		-1px -0   0   #39A1FF,
+		 1px -0   0   #39A1FF,
+		-1px  0   0   #39A1FF,
+		 1px  0   0   #39A1FF,
+		-1px -1px 0   #39A1FF,
+		 1px -1px 0   #39A1FF,
+		-1px  1px 0   #39A1FF,
+		 1px  1px 0   #39A1FF,
+		-1px -1px 0   #39A1FF,
+		 1px -1px 0   #39A1FF,
+		-1px  1px 0   #39A1FF,
+		 1px  1px 0   #39A1FF;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+	}
+
+	&__text{
+		@include font(normal, bold, 2.5rem, 1.5, $color-text);
+		letter-spacing: -0.5px;
+	}
+
+	&__img{margin-bottom: -140px;}
+}
+
+@media (max-width: 991px) {
+	.error-page{
+		&__content{padding-right: 20px;}
+		&__title{font-size: 6rem;}
+
+		&__text{
+			font-size: 2rem;
+			line-height: 1.375;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.error-page{
+		flex-direction: column-reverse;
+
+		&__content{
+			padding: 20px 0 0 0;
+			text-align: center;
+		}
+
+		&__title{font-size: 5rem;}
+		&__text{font-size: 1.6rem;}
+
+		&__title-bg{
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&__img{
+			max-width: 300px;
+			margin: 0 auto;
+		}
+	}
+}
