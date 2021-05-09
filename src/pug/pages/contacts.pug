@@ -1,0 +1,109 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Контакты';
+	- var h1 = 'Контакты';
+
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Контакты'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	.page-content
+		.container.container_indent
+			.row
+				.col-12
+					.bg-light-blue-left
+						.page-content__info
+							section.contact-list-wrap
+								.contact-list-wrap__content
+									.contact-list
+										.contact-list__item
+											.contact-list__icon
+												+svg('ic-address','ic-address', '30', '37')
+											.contact-list__content
+												.contact-list__label Адрес:
+												.contact-list__text 164522, Архангельская область, г. Северодвинск, ул. Трухинова, д. 6А, пом. 3-Н
+										
+										.contact-list__item
+											.contact-list__icon
+												+svg('ic-call','ic-call', '25', '25')
+											.contact-list__content
+												.contact-list__label Телефон:
+												.contact-list__text
+													a(href="tel:+74951234567") +7 (495) 123-45-67
+													br
+													a(href="tel:+74951234567") +7 (495) 123-45-67
+										
+										.contact-list__item
+											.contact-list__icon
+												+svg('ic-path','ic-path', '38', '33')
+											.contact-list__content
+												.contact-list__label Как добраться:
+												.contact-list__text
+													.contact-path
+														span.contact-path__icon
+															+svg('ic-bus','ic-bus', '18', '18')
+														span.contact-path__text Бульвар Строителей
+														span.contact-path__distance
+															+svg('ic-person','ic-person', '8', '14')
+															|180 м
+
+														span.contact-path__num 4
+									
+								.contact-list-wrap__map
+									#map.map
+									script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+
+					.branches-detail-clear
+
+
+			.row
+				.col-12
+					.other-contact
+						h2 Другие отделения
+
+						- for (var x = 0; x < 3; x++)
+							.contact-list
+								.contact-list__item
+									.contact-list__icon
+										+svg('ic-address','ic-address', '30', '37')
+									.contact-list__content
+										.contact-list__label Адрес:
+										.contact-list__text 164522, Архангельская область, г. Северодвинск, ул. Трухинова, д. 6А, пом. 3-Н
+								
+								.contact-list__item
+									.contact-list__icon
+										+svg('ic-call','ic-call', '25', '25')
+									.contact-list__content
+										.contact-list__label Телефон:
+										.contact-list__text
+											a(href="tel:+74951234567") +7 (495) 123-45-67
+											br
+											a(href="tel:+74951234567") +7 (495) 123-45-67
+								
+								.contact-list__item
+									.contact-list__icon
+										+svg('ic-path','ic-path', '38', '33')
+									.contact-list__content
+										.contact-list__label Как добраться:
+										.contact-list__text
+											.contact-path
+												span.contact-path__icon
+													+svg('ic-bus','ic-bus', '18', '18')
+												span.contact-path__text Бульвар Строителей
+												span.contact-path__distance
+													+svg('ic-person','ic-person', '8', '14')
+													|180 м
+
+												span.contact-path__num 4
+
+											a(href="#") Показать на карте
+
+	include ../components/mark
