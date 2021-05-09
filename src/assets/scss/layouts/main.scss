@@ -253,6 +253,13 @@ button.btn_border:hover{
 	.bg-content{padding: 60px 0 55px;}
 	main{padding-bottom: 80px;}
 	.last-elem{margin-bottom: -80px!important;}
+
+	.container_indent{
+		padding: 0 40px;
+
+		.bg-light-blue-left::before{right: -30px;}
+		.bg-light-blue-right::before{left: -30px;}
+	}
 }
 
 @media (max-width: 767px) {

@@ -110,7 +110,7 @@
 	&__more-link:hover{color: $color-dark-blue;}
 }
 
-.article-more{
+.btn-more{
 	text-align: center;
 	margin-top: 60px;
 }
@@ -143,7 +143,7 @@
 		margin-bottom: 60px;
 	}
 
-	.article-more{margin-top: 0;}
+	.btn-more{margin-top: 0;}
 }
 
 @media (max-width: 1469px) {
@@ -161,6 +161,8 @@
 			height: calc(100% - 30px);
 			margin-bottom: 30px;
 		}
+
+		.btn-more{margin-top: 30px;}
 	}
 }
 
@@ -221,5 +223,5 @@
 		.slick-slide{margin: 0 10px;}
 	}
 
-	.article-more{margin-top: 10px;}
+	.btn-more{margin-top: 10px;}
 }

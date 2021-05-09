@@ -85,5 +85,7 @@
 
 		&__content{padding-top: 20px;}
 		&__subtitle{margin-bottom: 10px;}
+
+		& + .btn-more{margin-top: 35px;}
 	}
 }
