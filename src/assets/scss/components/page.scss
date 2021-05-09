@@ -30,15 +30,20 @@
 	margin-bottom: 130px;
 	
 	&__info{
-		padding: 32px 0 90px;
+		padding: 98px 0 90px;
 		position: relative;
+
+		.filter{margin-top: -65px;}
 	}
+
+	.detail-nav-wrap{margin-bottom: -77px;}
 }
 
 @media (max-width: 991px) {
 	.page-content{
 		margin-bottom: 80px;
 		&__info{padding-bottom: 60px;}
+		.detail-nav-wrap{margin-bottom: -20px;}
 	}
 }
 
@@ -49,12 +54,15 @@
 	}
 
 	.page-content{
-		background: $color-light-blue;
 		margin-top: 0;
 		margin-bottom: 40px;
 
-		&__info{padding-bottom: 40px;}
+		&__info{
+			padding-top: 40px;
+			padding-bottom: 40px;
 
-		.container_indent .bg-light-blue-left::before{display: none;}
+			.filter{margin-top: 0;}
+			.detail-nav-wrap{margin-bottom: 0;}
+		}
 	}
 }

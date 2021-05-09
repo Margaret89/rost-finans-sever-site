@@ -304,4 +304,12 @@ button.btn_border:hover{
 	p + .h2, p + .h3, p + h2, p + h3{margin-top: 2rem;}
 	p + ul, p + ol{margin-top: 3.2rem;}
 	li{margin-bottom: 9px;}
+
+	.container_indent .bg-light-blue-left::before,
+	.container_indent .bg-light-blue-right::before{
+		width: calc(100% + 40px);
+	}
+
+	.container_indent .bg-light-blue-left::before{right: -20px;}
+	.container_indent .bg-light-blue-right::before{left: -20px;}
 }
