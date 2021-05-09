@@ -1,0 +1,96 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Реквизиты';
+	- var h1 = 'Реквизиты';
+
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Реквизиты'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	.page-content
+		.container.container_indent
+			.row
+				.col-12
+					.bg-light-blue-left
+						.page-content__info.clearfix
+							.form-info
+								.row
+									.col-md-5.order-2.order-md-1
+										.contact-list
+											.contact-list__item
+												.contact-list__icon
+													+svg('ic-address','ic-address', '30', '37')
+												.contact-list__content
+													.contact-list__label Главный офис:
+													.contact-list__text 164522, Архангельская область, г. Северодвинск, ул. Трухинова, д. 6А, пом. 3-Н
+											
+											.contact-list__item
+												.contact-list__icon
+													+svg('ic-call','ic-call', '25', '25')
+												.contact-list__content
+													.contact-list__label Телефон:
+													.contact-list__text
+														a(href="tel:+74951234567") +7 (495) 123-45-67
+														br
+														a(href="tel:+74951234567") +7 (495) 123-45-67
+											
+											.contact-list__item
+												.contact-list__icon
+													+svg('ic-mail','ic-mail', '25', '19')
+												.contact-list__content
+													.contact-list__label E-mail:
+													.contact-list__text
+														a(href="mailto:rostfinance@mail.ru") rostfinance@mail.ru
+
+									.col-md-7.d-flex.justify-content-end.order-1.order-md-2
+										.form-info__img
+											img(src="assets/img/form-img.jpg", alt="")
+
+							.h2 Реквизиты
+							.bank-params
+								-
+									var list=[
+										{title:'Полное название организации', val:'Общество с ограниченной ответственностью "РОСТ ГРУПП"'},
+										{title:'Уставный капитал', val:'20 000'},
+										{title:'ОКФС', val:'Собственность иностранных граждан и лиц без гражданства'},
+										{title:'ОКОПФ', val:'Общества с ограниченной ответственностью'},
+									]
+								each item in list
+									.bank-params__item
+										.bank-params__title= item.title
+										.bank-params__val= item.val
+
+							.h2 Сведения о государственной регистрации
+							.bank-params
+								-
+									var list=[
+										{title:'Дата регистрации', val:'21.05.2020'},
+										{title:'Регистрирующий орган', val:'Межрайонная инспекция ФНС России №46 по г.Москве'},
+										{title:'Адрес регистрирующего органа', val:'125373,Москва г,Походный проезд, домовладение 3, стр.2'},
+										{title:'Регистрирующий орган, в котором находится регистрационное дело', val:'Межрайонная инспекция Федеральной налоговой службы № 46 по г. Москве'},
+									]
+								each item in list
+									.bank-params__item
+										.bank-params__title= item.title
+										.bank-params__val= item.val
+
+							.h2 Виды деятельности
+							p Главная цель обращения клиента в компанию – быстро получить необходимую сумму под низкий процент. Предпосылки возникновения потребности в деньгах различны:
+
+							ul
+								li Техническое обслуживание и ремонт автотранспортных средств
+								li Торговля оптовая автомобильными деталями, узлами и принадлежностями
+								li Деятельность агентов по оптовой торговле лесоматериалами и строительными материалами
+								li Деятельность агентов по оптовой торговле строительными материалами
+
+
+
+	include ../components/mark
