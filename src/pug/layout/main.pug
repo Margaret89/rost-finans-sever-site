@@ -13,8 +13,13 @@ html(lang='ru')
 			include ./header
 			main
 				block header-ban
-				block breadcrumb
 				if h1
-					+h1(h1)
+					.page-top
+						.page-top__content
+							.container.container_indent
+								.row
+									.col-12
+										block breadcrumb
+										h1= h1
 				block content
 			include ./footer

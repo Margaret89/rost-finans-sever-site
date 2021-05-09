@@ -137,7 +137,14 @@
 	.article-item{display: flex!important;}
 }
 
-// .article-page{margin-bottom: 103px;}
+.article-list{
+	.article-item{
+		height: calc(100% - 60px);
+		margin-bottom: 60px;
+	}
+
+	.article-more{margin-top: 0;}
+}
 
 @media (max-width: 1469px) {
 	.article-slider{
@@ -147,6 +154,13 @@
 		}
 
 		.slick-slide{margin: 0 15px;}
+	}
+
+	.article-list{
+		.article-item{
+			height: calc(100% - 30px);
+			margin-bottom: 30px;
+		}
 	}
 }
 

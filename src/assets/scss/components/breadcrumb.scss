@@ -1,0 +1,38 @@
+/*-------------- breadcrumb -----------------*/
+.breadcrumb{
+	&,
+	&__item{
+		@include reset-list;
+	}
+
+	&{
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 76px;
+	}
+
+	&__item{
+		@include font(normal, 300, 1.4rem, 1.2, #fff);
+		margin: 5px 0;
+	}
+
+	&__item a{
+		color: #8dc2ff;
+		text-decoration: none;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__item::before{display: none;}
+
+	&__item:not(:last-child):after{
+		content: '|';
+		margin-left: 9px;
+		margin-right: 8px;
+	}
+
+	&__item a:hover{color: #fff;}
+}
+
+@media (max-width: 767px) {
+	.breadcrumb{margin-bottom: 25px;}
+}
