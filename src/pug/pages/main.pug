@@ -113,13 +113,13 @@ block content
 								]
 
 							each item in list
-								.branches-slider__item
-									.branches-slider__img(style="background-image: url(assets/img/"+item.img+")")
+								.branches-item
+									.branches-item__img(style="background-image: url(assets/img/"+item.img+")")
 									
-									.branches-slider__content
-										.branches-slider__city= item.title
-										.branches-slider__index= item.index
-										.branches-slider__address= item.address
+									.branches-item__content
+										.branches-item__city= item.title
+										.branches-item__index= item.index
+										.branches-item__address= item.address
 
 	section.mark-wrap
 		.container.container_indent
