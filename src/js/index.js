@@ -257,7 +257,6 @@ if($('.js-header-mob-contact-btn').length){
 	});
 
 	$(document).on('click', function(event) {
-		console.log(widthWindow);
 		if(widthWindow < 992){
 			if ($(event.target).closest(".js-header-mob-contact-popup").length) return;
 			if ($(event.target).closest(".js-header-mob-contact-btn").length) return;

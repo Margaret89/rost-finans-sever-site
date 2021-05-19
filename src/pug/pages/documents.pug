@@ -42,4 +42,25 @@ block content
 								li открыть небольшой бизнес;
 								li сделать ремонт.
 
+							.docs-list
+								-
+									var list=[
+										{text:'Свидетельство о регистрации юридического лица', size:'863.53 KB'},
+										{text:' Свидетельство о постановке на учёт в налоговом органе', size:'863.53 KB'},
+										{text:'Оферта о заключении арбитражного соглашения для займов без обеспечения', size:'863.53 KB'},
+									]
+
+								each item in list
+									.doc
+										.doc__content
+											.doc__icon
+												+svg('ic-pdf','ic-pdf', '27', '26')
+
+											.doc__info
+												span.doc__text= item.text
+												span.doc__size= item.size
+
+										a(href="#").btn.btn_border.btn_dot
+											span Скачать
+
 	include ../components/mark
