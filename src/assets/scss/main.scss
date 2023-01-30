@@ -18,19 +18,42 @@
 // bootstrap-slider
 @import "~bootstrap-slider/src/sass/bootstrap-slider.scss";
 
-@import "~sass-rem/_rem.scss";
-
 // Наш сайт
 // @import "utils/libs";
 @import "utils/mixins";
 @import "utils/fonts";
 @import "utils/reset";
 
-@import "layouts/*";
-@import "components/*";
+// @import "layouts/*";
+// @import "components/*";
 
+@import "layouts/main";
+@import "layouts/header";
+@import "layouts/footer";
 
-
-
-
-
+@import "components/article-detail.scss";
+@import "components/article-list.scss";
+@import "components/bank-details.scss";
+@import "components/branches.scss";
+@import "components/branches-detail.scss";
+@import "components/breadcrumb.scss";
+@import "components/contact-list.scss";
+@import "components/docs.scss";
+@import "components/error-page.scss";
+@import "components/faq.scss";
+@import "components/filter.scss";
+@import "components/form-calc.scss";
+@import "components/hamburger.scss";
+@import "components/icons.scss";
+@import "components/main-menu.scss";
+@import "components/map.scss";
+@import "components/mark.scss";
+@import "components/move-up.scss";
+@import "components/page.scss";
+@import "components/product-list.scss";
+@import "components/range-slider.scss";
+@import "components/riview-slider.scss";
+@import "components/team-slider.scss";
+@import "components/top-block.scss";
+@import "components/type-icon.scss";
+@import "components/unwrap-block.scss";
